@@ -6,7 +6,8 @@ public class Calculator {
         if(numbers.length() == 0) return 0;
         if(numbers.length() == 1) return numbers.charAt(0) - '0';
 
-        String[] nums = numbers.split(",");
+        String[] nums = numbers.replaceAll("\\n",",")
+                .split(",");
 
         for(String str : nums) {
             sum += Long.parseLong(str);
