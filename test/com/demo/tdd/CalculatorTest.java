@@ -32,4 +32,17 @@ public class CalculatorTest {
         // assert
         assertEquals(expectedSum, actualSum);
     }
+
+    @Test
+    public void adding2Num() {
+        // arrange
+        Calculator calculator = new Calculator();
+        int expectedSum = 3;
+
+        // act
+        int actualSum = calculator.add("1,2");
+
+        // assert
+        assertEquals(expectedSum, actualSum);
+    }
 }
