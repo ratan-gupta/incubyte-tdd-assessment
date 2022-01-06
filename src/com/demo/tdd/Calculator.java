@@ -6,6 +6,12 @@ public class Calculator {
         if(numbers.length() == 0) return 0;
         if(numbers.length() == 1) return numbers.charAt(0) - '0';
 
+        char[] num = numbers.toCharArray();
+
+        for(char ch : num) {
+            sum += (ch - '0');
+        }
+
         return sum;
     }
 }
