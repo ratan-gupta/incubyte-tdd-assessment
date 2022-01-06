@@ -26,7 +26,7 @@ public class Calculator {
         }
 
         String[] nums = numbers.replaceAll("\\n", String.valueOf(delimiter))
-                .split(String.valueOf(delimiter));
+                .split("\\" + delimiter);
 
         return nums;
     }
