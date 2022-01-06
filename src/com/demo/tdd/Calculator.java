@@ -6,10 +6,10 @@ public class Calculator {
         if(numbers.length() == 0) return 0;
         if(numbers.length() == 1) return numbers.charAt(0) - '0';
 
-        char[] num = numbers.toCharArray();
+        String[] nums = numbers.split(",");
 
-        for(char ch : num) {
-            sum += (ch - '0');
+        for(String str : nums) {
+            sum += Integer.valueOf(str);
         }
 
         return sum;
