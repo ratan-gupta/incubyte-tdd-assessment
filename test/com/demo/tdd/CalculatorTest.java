@@ -86,4 +86,16 @@ public class CalculatorTest {
         // assert
         assertEquals(expectedSum, actualSum);
     }
+
+    @Test
+    public void adding3NumWithSemiColonDelimiter() {
+        // arrange
+        long expectedSum = 6;
+
+        // act
+        long actualSum = calculator.add("//;\n1;2");
+
+        // assert
+        assertEquals(expectedSum, actualSum);
+    }
 }
