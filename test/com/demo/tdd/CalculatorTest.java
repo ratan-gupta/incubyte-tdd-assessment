@@ -93,7 +93,7 @@ public class CalculatorTest {
         long expectedSum = 6;
 
         // act
-        long actualSum = calculator.add("//;\n1;2");
+        long actualSum = calculator.add("//;\n1;2;3");
 
         // assert
         assertEquals(expectedSum, actualSum);
