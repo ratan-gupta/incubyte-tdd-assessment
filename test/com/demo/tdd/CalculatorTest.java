@@ -68,7 +68,20 @@ public class CalculatorTest {
         long expectedSum = 4999999999995L;
 
         // act
-        long actualSum = calculator.add("999999999999,999999999999,999999999999,999999999999,999999999999");
+        long actualSum = calculator.add("999999999999,999999999999," +
+                "999999999999,999999999999,999999999999");
+
+        // assert
+        assertEquals(expectedSum, actualSum);
+    }
+
+    @Test
+    public void adding3NumWithNewLine() {
+        // arrange
+        long expectedSum = 6;
+
+        // act
+        long actualSum = calculator.add("1\n2,3");
 
         // assert
         assertEquals(expectedSum, actualSum);
