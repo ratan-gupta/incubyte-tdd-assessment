@@ -19,4 +19,17 @@ public class CalculatorTest {
         // assert
         assertEquals(expectedSum, actualSum);
     }
+
+    @Test
+    public void adding1Num() {
+        // arrange
+        Calculator calculator = new Calculator();
+        int expectedSum = 1;
+
+        // act
+        int actualSum = calculator.add("1");
+
+        // assert
+        assertEquals(expectedSum, actualSum);
+    }
 }
