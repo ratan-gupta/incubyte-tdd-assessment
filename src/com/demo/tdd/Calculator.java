@@ -25,8 +25,8 @@ public class Calculator {
             numbers = numbers.replaceAll("\\//.*?\\\n", "");
         }
 
-        String[] nums = numbers.replaceAll("\\n", Character.toString(delimiter))
-                .split(Character.toString(delimiter));
+        String[] nums = numbers.replaceAll("\\n", String.valueOf(delimiter))
+                .split(String.valueOf(delimiter));
 
         return nums;
     }

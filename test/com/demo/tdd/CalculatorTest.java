@@ -98,4 +98,16 @@ public class CalculatorTest {
         // assert
         assertEquals(expectedSum, actualSum);
     }
+
+    @Test
+    public void adding3NumWithDollarDelimiter() {
+        // arrange
+        long expectedSum = 6;
+
+        // act
+        long actualSum = calculator.add("//$\n1$2$3");
+
+        // assert
+        assertEquals(expectedSum, actualSum);
+    }
 }
