@@ -9,7 +9,7 @@ public class Calculator {
         String[] nums = numbers.split(",");
 
         for(String str : nums) {
-            sum += Integer.valueOf(str);
+            sum += Long.parseLong(str);
         }
 
         return sum;
