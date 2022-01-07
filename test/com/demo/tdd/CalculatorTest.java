@@ -110,4 +110,18 @@ public class CalculatorTest {
         // assert
         assertEquals(expectedSum, actualSum);
     }
+
+    @Test
+    public void adding2NegativeNum() {
+        // arrange
+        String expectedExceptionMessage = "Negatives not allowed: -1, -2";
+
+        try {
+            // act
+            calculator.add("-1,-2");
+        } catch(RuntimeException e) {
+            // assert
+            assertEquals(expectedExceptionMessage, e.getMessage());
+        }
+    }
 }
