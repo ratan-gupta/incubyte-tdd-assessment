@@ -3,11 +3,7 @@ package com.demo.tdd;
 public class Calculator {
     public DatabaseService databaseService;
 
-//    public Calculator(DatabaseService databaseService) {
-//        this.databaseService = databaseService;
-//    }
-
-    public void setDatabaseService(DatabaseService databaseService) {
+    public Calculator(DatabaseService databaseService) {
         this.databaseService = databaseService;
     }
 

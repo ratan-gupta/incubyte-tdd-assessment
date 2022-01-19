@@ -9,6 +9,9 @@ import org.mockito.*;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -18,15 +21,13 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 public class CalculatorTest {
-    //@Mock
-    public DatabaseService databaseService;
+    private DatabaseService databaseServiceMock;
     private Calculator calculator;
 
     @BeforeEach
     public void create() {
-        calculator = new Calculator();
-        databaseService = mock(DatabaseService.class);
-        calculator.setDatabaseService(databaseService);
+        databaseServiceMock = mock(DatabaseService.class);
+        calculator = new Calculator(databaseServiceMock);
     }
 
     @Test
@@ -149,7 +150,7 @@ public class CalculatorTest {
         calculator.add("1,2");
 
         // assert
-        assertTrue(verify(databaseService).insert("1,2"));
+        verify(databaseServiceMock).insert("1,2");
     }
 
     @Test
